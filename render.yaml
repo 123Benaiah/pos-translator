@@ -1,0 +1,29 @@
+# Render blueprint: free backend API + free static frontend
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: pos-translator-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: MONGO_URI
+        sync: false # set in dashboard: mongodb+srv://...@cluster0.va72sde.mongodb.net/pos_translator
+      - key: DB_NAME
+        value: pos_translator
+      - key: CORS_ORIGINS
+        value: https://pos-translator.pages.dev,http://localhost:5173
+      - key: PORT
+        value: 8000
+
+  - type: web
+    name: pos-translator-web
+    runtime: static
+    plan: free
+    buildCommand: cd frontend && npm ci && npm run build
+    staticPublishPath: ./frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://pos-translator-api.onrender.com

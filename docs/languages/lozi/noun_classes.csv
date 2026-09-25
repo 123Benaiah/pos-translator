@@ -1,0 +1,21 @@
+class_number,prefix,singular_or_plural,typical_meaning,example_singular,example_plural
+1,mu-,singular,human beings,mutu (person),batu
+2,ba-,plural of class 1,people,,batu
+1a,ø,singular,kinship terms,ndate (father),bondate
+2a,bo-,plural of class 1a,kinship plural,,bondate
+3,mu-/mw-,singular,trees/body parts,moyo (heart),myoyo
+4,mi-/my-,plural of class 3,hearts,,myoyo
+5,li-/l-,singular,pairs/abundance,licwe (stone),macwe
+6,ma-,plural of 5 & 11 / liquids,stones/water,,macwe
+7,si-/s-,singular,objects/sickness,sifuba (chest),lifuba
+8,bi-/by-,plural of 7,chests,,lifuba
+9,N-,singular,animals/everyday objects,nja (dog),linja
+10,li-,plural of 9 & 7,dogs,,linja
+11,lu-/lw-,singular,long things,horns,lunaka
+12,ka-,singular,diminutives,small things,kabanze
+13,tu-,plural of 12,small things plural,,tuhutwe
+14,bu-,singular,mass/abstract,night,busihu
+15,ku-,singular,infinitive form,to see,kubona
+16,fa-,locative,at/near a place,on a table,fatafule
+17,ku-,locative,general location,where the chief is,kumulena
+18,mu-,locative,inside a place,inside a house,mwandu

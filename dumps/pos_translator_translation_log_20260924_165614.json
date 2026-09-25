@@ -1,0 +1,132 @@
+[
+  {
+    "_id": {
+      "$oid": "6aa3d74edc934d4228c7304e"
+    },
+    "input_text": "die",
+    "from_lang": "en",
+    "to_lang": "loz",
+    "output_text": "shwa",
+    "found": true,
+    "timestamp": {
+      "$date": "2026-09-11T10:26:22.224Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3d74edc934d4228c7304f"
+    },
+    "input_text": "die",
+    "from_lang": "en",
+    "to_lang": "bem",
+    "output_text": "fwa",
+    "found": true,
+    "timestamp": {
+      "$date": "2026-09-11T10:26:22.226Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3d75cdc934d4228c73050"
+    },
+    "input_text": "shwa",
+    "from_lang": "loz",
+    "to_lang": "en",
+    "output_text": "die",
+    "found": true,
+    "timestamp": {
+      "$date": "2026-09-11T10:26:36.130Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3d75cdc934d4228c73051"
+    },
+    "input_text": "shwa",
+    "from_lang": "loz",
+    "to_lang": "bem",
+    "output_text": "fwa",
+    "found": true,
+    "timestamp": {
+      "$date": "2026-09-11T10:26:36.132Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3d75cdc934d4228c73052"
+    },
+    "input_text": "shwa",
+    "from_lang": "loz",
+    "to_lang": "en",
+    "output_text": "die",
+    "found": true,
+    "timestamp": {
+      "$date": "2026-09-11T10:26:36.968Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3d75cdc934d4228c73053"
+    },
+    "input_text": "shwa",
+    "from_lang": "loz",
+    "to_lang": "bem",
+    "output_text": "fwa",
+    "found": true,
+    "timestamp": {
+      "$date": "2026-09-11T10:26:36.970Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3dfc18eac9c8134b9a046"
+    },
+    "input_text": "buy",
+    "from_lang": "en",
+    "to_lang": "loz",
+    "output_text": "lek",
+    "found": true,
+    "timestamp": {
+      "$date": "2026-09-11T11:02:25.546Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3dfc18eac9c8134b9a047"
+    },
+    "input_text": "buy",
+    "from_lang": "en",
+    "to_lang": "bem",
+    "output_text": "shita",
+    "found": true,
+    "timestamp": {
+      "$date": "2026-09-11T11:02:25.566Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3e2868eac9c8134b9a049"
+    },
+    "input_text": "hello",
+    "from_lang": "en",
+    "to_lang": "loz",
+    "output_text": "",
+    "found": false,
+    "timestamp": {
+      "$date": "2026-09-11T11:14:14.320Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa3e2888eac9c8134b9a04a"
+    },
+    "input_text": "hello",
+    "from_lang": "en",
+    "to_lang": "bem",
+    "output_text": "",
+    "found": false,
+    "timestamp": {
+      "$date": "2026-09-11T11:14:16.476Z"
+    }
+  }
+]

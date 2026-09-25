@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+}
+
+@layer utilities {
+  .gradient-purple {
+    @apply bg-gradient-to-br from-purple-600 to-purple-900;
+  }
+  .gradient-orange {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600;
+  }
+  .gradient-gold {
+    @apply bg-gradient-to-r from-gold-400 to-gold-600;
+  }
+  .gradient-tri {
+    @apply bg-gradient-to-r from-purple-600 via-orange-500 to-gold-500;
+  }
+  .text-gradient-purple {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-purple-900;
+  }
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-500 to-gold-700;
+  }
+}

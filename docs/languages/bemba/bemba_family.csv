@@ -1,0 +1,28 @@
+english,bemba,notes,verified
+father,tata,,true
+mother,mama,also "mme" in other regions,true
+child,umwana,,true
+son,umwana mwaume,,true
+daughter,mwana mwanakashi,,true
+boy,umwana mwaume,,true
+girl,mukashana,,true
+brother,indume,,true
+sister,inkashi,,true
+grandfather,shikulu,sokulu,true
+grandmother,mama,nokokulu,true
+grandchild,mwishikulu,,true
+husband,muka,,true
+wife,mukashi,,true
+uncle (maternal),nalume,,true
+aunt (paternal),noko,,true
+cousin,mufyala,,true
+nephew,umwana wa ndume,,true
+niece,umwana wa nkashi,,true
+father-in-law,pongoshi,,true
+mother-in-law,bukwe,,true
+son-in-law,mukwe,,true
+daughter-in-law,mupongoshi,,true
+family,lupwa,,true
+clan,umukowa,,true
+ancestor,icikolwe,,true
+first born,ibeli,,true

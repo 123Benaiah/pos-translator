@@ -1,0 +1,30 @@
+# Secrets - NEVER commit real credentials
+.env
+*.env
+!.env.example
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+*.local
+*.tsbuildinfo
+frontend/vite.config.d.ts
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs / temp
+*.log

@@ -1,0 +1,34 @@
+english,silozi,source_page,context,verified
+I am buying meat,Nileka nama,59,affirmative present,true
+I don't want a dog,Anilati nja,50,negative present,true
+I have bought meat,Nilekile nama,85,past tense,true
+I shall buy meat,Nit aleka nama,84,future tense,true
+I might buy meat,Nik aleka nama,84,potential,true
+They see the fires,Babona mililo,75,affirmative,true
+The man fights,Munna walwana,50,affirmative,true
+My child is at the chief's village,Mwan'aka ukwamunzi wamulena,46,statement,true
+Where is your wife?,Musal'ahau ukae?,46,question,true
+His heart is as hard as a stone,Pili yahae itata cwale kalicwe,46,simile,true
+That man is kind,Munna yani umusa,46,statement,true
+To despise people is bad,Kuzwapaula batu kumaswe,46,statement,true
+My dog,nja yaka,53,possessive,true
+Your canoe,mukolo wahao,53,possessive,true
+His cattle,lipuli zahae,53,possessive,true
+Their children,bana babona,53,possessive,true
+My child,mwan'aka,53,possessive (abbreviated),true
+Owner of the village,muj' amunzi,53,possessive (abbreviated),true
+He is buying some beer,Wabul eka bucwala,85,present long form,true
+He bought some and drank,Ubul ekile anwa,85,past,true
+He knows well,Uziba hande,85,affirmative,true
+He does not know well,Haa zibi hande,85,negative,true
+Please help me,Akun ituse,85,hortative,true
+Let us all go,Haluyeji,96,hortative,true
+Let us not go out,Halusi zwi,96,negative hortative,true
+Do not buy!,Sileki!,99,negative imperative,true
+Buy meat!,Leka nama!,99,imperative singular,true
+Buy meat! (plural),Lekeyi nama!,99,imperative plural,true
+Thank you (singular),Nitumezi,common,courtesy,false
+Thank you (plural),Mutumezi,common,courtesy,false
+Good morning,Mutsamai hande,common,greeting,false
+Goodbye (to one leaving),Uzamaye hande,common,farewell,false
+Goodbye (to one staying),Usaale hande,common,farewell,false

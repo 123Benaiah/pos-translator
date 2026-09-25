@@ -1,0 +1,19 @@
+rule_id,rule_type,pattern,example_input,example_output,notes
+R001,noun_class,Class 1 singular uses mu- prefix,mutu,person,Human singular
+R002,noun_class,Class 2 plural uses ba- prefix,batu,people,Plural of class 1
+R003,noun_class,Class 5 li- becomes ma- in plural,licwe -> macwe,stone -> stones,pair noun
+R004,noun_class,Class 9 N- nasal prefix,nja,dog,homorganic nasal
+R005,noun_class,Class 9 plural adds li-,linja,dogs,not substituting
+R006,verb_prefix,Present affirmative uses sp-a,Nileka,I buy,long form
+R007,verb_prefix,Present negative uses ha-sp-i,Hanileki,I don't buy,negative
+R008,verb_prefix,Past uses sp-ile,Nilekile,I bought,perfect tense
+R009,verb_prefix,Future uses sp-ta-a,Nit aleka,I will buy,ta- infix
+R010,verb_prefix,Potential uses sp-ka-a,Nik aleka,I might buy,ka- infix
+R011,possessive,My uses -ka,nja yaka,my dog,agrees with noun class
+R012,possessive,Your (sing) uses -hau,mukolo wahao,your canoe,class 3 agreement
+R013,possessive,His/her uses -hae,lipuli zahae,his cattle,class 10 agreement
+R014,extension,Passive uses -w- or -iw-,zibwa,be known,after radical
+R015,extension,Reciprocal uses -an-,zibana,know each other,extends radical
+R016,extension,Causative uses -is-,lobalisa,cause to sleep,extends radical
+R017,extension,Applied uses -el-,lekel a,buy for,extends radical
+R018,extension,Perfective uses -elel-/-elez-,yelela,go for good,extends radical

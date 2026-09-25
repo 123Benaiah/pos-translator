@@ -1,0 +1,103 @@
+english,silozi,part_of_speech,noun_class,notes,source_page,verified
+person,mutu,noun,1,singular,12,true
+people,batu,noun,2,plural of mutu,12,true
+woman,musali,noun,1,,12,true
+women,basali,noun,2,plural of musali,12,true
+child,mwana,noun,1,,12,true
+children,bana,noun,2,plural of mwana,12,true
+father,ndate,noun,1a,kinship term,12,true
+mother,mme,noun,1a,kinship term,12,true
+chief,mulena,noun,1,,12,true
+dog,nja,noun,9,,12,true
+dogs,linja,noun,10,plural of nja,12,true
+house,ndu,noun,9,,12,true
+houses,lindu,noun,10,plural of ndu,12,true
+stone/licwe,licwe,noun,5,,12,true
+stones,macwe,noun,6,plural of licwe,12,true
+tooth,lino,noun,5,,12,true
+teeth,meno,noun,6,plural of lino,12,true
+eye,lito,noun,5,,12,true
+eyes,meto,noun,6,plural of lito,12,true
+heart,moyo,noun,3,,12,true
+hearts,myoyo,noun,4,plural of moyo,12,true
+thorn,mutwa,noun,3,,12,true
+thorns,miutwa,noun,4,plural of mutwa,12,true
+year,mwaha,noun,3,,12,true
+years,myaha,noun,4,plural of mwaha,12,true
+finger,munwana,noun,3,,12,true
+fingers,minwana,noun,4,plural of munwana,12,true
+lion,tau,noun,9,,12,true
+lions,litau,noun,10,plural of tau,12,true
+sheep,ngu,noun,9,,12,true
+ostrich,mpye,noun,9,,12,true
+car,kalu,noun,9,,12,true
+song,pina,noun,9,,12,true
+meat,nama,noun,9,,50,true
+beer,bucwala,noun,14,,100,true
+night,busihu,noun,14,,18,true
+water,mezi,noun,6,,30,true
+food,lico,noun,10,,40,true
+money,celete,noun,9,,41,true
+village,munzi,noun,3,,53,true
+work,musebezi,noun,3,,45,true
+book,buka,noun,9,,42,true
+tree,kola,noun,9,,26,true
+river,nuka,noun,9,,93,true
+field,simu,noun,9,,27,true
+fields,masimu,noun,6,plural of simu,27,true
+fish,litapi,noun,10,,30,true
+crocodile,likwena,noun,10,,30,true
+butterfly,sipulumuki,noun,7,,37,true
+knife,tipa,noun,9,,37,true
+pot,piza,noun,9,,53,true
+pots,lipizana,noun,10,plural of piza,60,true
+table,tafule,noun,9,,44,true
+bread,buhobe,noun,14,,79,true
+ox,komu,noun,9,,36,true
+cow,komu,noun,9,,30,true
+horn,lunaka,noun,11,,26,true
+horns,manaka,noun,6,plural of lunaka,26,true
+hair,loya,noun,11,,27,true
+wool,boya,noun,14,,19,true
+island,sioli,noun,7,,15,true
+islands,lioli,noun,10,plural of sioli,15,true
+chest,sifuba,noun,7,,15,true
+chests,lifuba,noun,10,plural of sifuba,15,true
+iron,ongo,noun,9,,15,true
+pieces of iron,byongo,noun,8,plural of ongo,15,true
+scorpion,kabanze,noun,12,,19,true
+scorpions,tuhutwe,noun,13,plural of kabanze,19,true
+pumpkin,mungu,noun,3,,19,true
+pumpkins,miungu,noun,4,plural of mungu,19,true
+canoe,mukolo,noun,3,,41,true
+mat,lwau,noun,11,reed mat,27,true
+home,ndu,noun,9,,12,true
+sun,lizazi,noun,5,,104,true
+buck,folofolo,noun,9,,103,true
+snake,noha,noun,9,,103,true
+bird,liiba,noun,5,,75,true
+birds,liiba,noun,6,plural of liiba,75,true
+enemy,lila,noun,5,,93,true
+stranger,mueni,noun,1,,41,true
+friend,ndume / mulikani,noun,1a / 1,,101,true
+girl,musizana,noun,1,,37,true
+boy,mushimani,noun,1,,37,true
+teacher,muluti,noun,1,from -lut-,45,true
+farmer,mulimi,noun,1,from -lim-,45,true
+sinner,muluzi,noun,1,,45,true
+drunkard,sitahwa,noun,7,from -tahw-,45,true
+health,bupilo,noun,14,from -pil-,45,true
+laziness,buzwa,noun,14,from -buzw-,41,true
+anger,hali,noun,9,,41,true
+cowardice,boi,noun,14,,41,true
+weight,bukiti,noun,14,,41,true
+softness,bunolo,noun,14,,41,true
+stubbornness,bukala,noun,14,,41,true
+strength,buhali,noun,14,,41,true
+evil,bumaswe,noun,14,,41,true
+mercy,buhombe,noun,14,,41,true
+difficulty,butata,noun,14,,41,true
+good luck,bwanyu,noun,14,,19,true
+bad luck,malimabi,noun,6,,19,true
+Lozi-land,bulosi,noun,14,,19,true
+humanity,buntu,noun,14,,19,true

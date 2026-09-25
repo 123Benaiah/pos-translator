@@ -1,4 +1,4 @@
-# Render blueprint: free backend API + free static frontend
+# Render blueprint: backend API only (frontend deploys on Vercel via vercel.json).
 # Docs: https://render.com/docs/blueprint-spec
 services:
   - type: web
@@ -14,16 +14,8 @@ services:
       - key: DB_NAME
         value: pos_translator
       - key: CORS_ORIGINS
-        value: https://pos-translator.pages.dev,http://localhost:5173
+        # Append your Vercel URL after the first frontend deploy,
+        # e.g. https://pos-translator.vercel.app,http://localhost:5173
+        value: http://localhost:5173
       - key: PORT
         value: 8000
-
-  - type: web
-    name: pos-translator-web
-    runtime: static
-    plan: free
-    buildCommand: cd frontend && npm ci && npm run build
-    staticPublishPath: ./frontend/dist
-    envVars:
-      - key: VITE_API_URL
-        value: https://pos-translator-api.onrender.com

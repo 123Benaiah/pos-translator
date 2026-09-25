@@ -16,7 +16,10 @@ from pymongo import MongoClient, ASCENDING, DESCENDING, UpdateOne
 from pymongo.errors import BulkWriteError
 from dotenv import load_dotenv
 
-load_dotenv()
+# Backend owns MONGO_URI / DB_NAME: load backend/.env explicitly so this
+# script works from any working directory (repo root, scripts/, backend/).
+_BACKEND_ENV = Path(__file__).resolve().parent.parent / "backend" / ".env"
+load_dotenv(dotenv_path=_BACKEND_ENV)
 
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
 DB_NAME = os.getenv("DB_NAME", "pos_translator")

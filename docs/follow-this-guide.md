@@ -9,7 +9,7 @@ Step-by-step guide to connect your FastAPI project to local MongoDB, build CRUD 
 Activate your venv first, then install everything at once:
 
 ```powershell
-.\venv\Scripts\Activate.ps1
+.\backend\venv\Scripts\Activate.ps1
 pip install fastapi uvicorn[standard] pymongo motor python-dotenv passlib[bcrypt] python-jose[cryptography] pydantic pydantic-settings
 ```
 
@@ -520,7 +520,7 @@ const deleteItem = async (id) => {
 - Make sure `allow_origins` in `main.py` includes your React dev server URL (`http://localhost:5173`)
 
 **ModuleNotFoundError:**
-- Make sure your venv is activated: `.\venv\Scripts\Activate.ps1`
+- Make sure your venv is activated: `.\backend\venv\Scripts\Activate.ps1`
 - Make sure packages are installed: `pip install -r requirements.txt`
 
 **`__pycache__` issues:**

@@ -5,11 +5,22 @@ FastAPI REST API for the English–Lozi–Bemba translation dictionary.
 ## Setup
 
 ```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-> Note: The `.env` file is in the project root (`../.env`).
+> Env lives here: copy `.env.example` to `.env` in this folder
+> (`backend/.env` holds `MONGO_URI`, `DB_NAME`, `CORS_ORIGINS`).
+
+## Deploy (Render)
+
+`render.yaml` at the repo root defines the `pos-translator-api` Docker service.
+Set in the Render dashboard:
+
+- `MONGO_URI` — your Atlas connection string (secret, `sync: false`)
+- `CORS_ORIGINS` — include your Vercel frontend URL after it deploys
 
 ## API Docs
 

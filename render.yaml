@@ -16,6 +16,6 @@ services:
       - key: CORS_ORIGINS
         # Append your Vercel URL after the first frontend deploy,
         # e.g. https://pos-translator.vercel.app,http://localhost:5173
-        value: http://localhost:5173
+        value: https://pos-translator-three.vercel.app,http://localhost:5173
       - key: PORT
         value: 8000

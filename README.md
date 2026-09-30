@@ -27,7 +27,7 @@ the break is Vercel → Render (CORS / env), not Render → DB.
 See `docs/TROUBLESHOOTING.md`.
 
 Details: `docs/ARCHITECTURE.md`. Endpoints: `docs/API.md` + `backend/README.md`.
-Deploy record: `DEPLOYMENT.md`.
+Deploy record: `docs/DEPLOYMENT.md`.
 
 ## Project structure
 
@@ -60,11 +60,11 @@ pos-translator/
 │   └── README.md            # frontend guide
 ├── scripts/                 # setup_database.py (seed from docs/languages CSVs)
 ├── docs/languages/          # source CSVs: lozi/*.csv (9), bemba/*.csv (9)
-├── docs/                    # ARCHITECTURE, API, TROUBLESHOOTING (+ archive note)
+├── docs/                    # ARCHITECTURE, API, TROUBLESHOOTING, DEPLOYMENT (+ archive note)
 ├── dumps/                   # seed JSON dumps + migration notes
 ├── render.yaml              # Render blueprint (Docker, no PORT — injected)
 ├── vercel.json              # LEGACY root config (only if Root Directory = ./)
-└── DEPLOYMENT.md            # step-by-step deploy history
+└── docs/DEPLOYMENT.md       # step-by-step deploy history
 ```
 
 Conventions:
@@ -139,7 +139,7 @@ Verify:
   `render.yaml` is the Docker blueprint (no `PORT` — Render injects `$PORT`).
 - Vercel `pos-translator` (Root `frontend`, `npm ci`, `npm run build`,
   Output `dist`, `frontend/vercel.json` rewrites). Env `VITE_API_URL`.
-Full history: `DEPLOYMENT.md`.
+Full history: `docs/DEPLOYMENT.md`.
 
 ## Troubleshooting
 

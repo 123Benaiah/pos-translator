@@ -3,7 +3,7 @@
 > NOTE (chief dev): this is a generic JWT/auth tutorial kept for reference only.
 > It does NOT describe this repo — there is no JWT auth, no `auth/items` routers here.
 > For this project start at `README.md`, then `docs/ARCHITECTURE.md`, `docs/API.md`,
-> `docs/TROUBLESHOOTING.md`, and `DEPLOYMENT.md`.
+> `docs/TROUBLESHOOTING.md`, and `docs/DEPLOYMENT.md`.
 
 Step-by-step guide to connect your FastAPI project to local MongoDB, build CRUD APIs with JWT auth, and consume them from React Vite.
 

@@ -102,9 +102,10 @@ Copy-Item backend\.env.example backend\.env -Force
 cd backend
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-pip install -r requirements.txt -r ..\scripts\requirements.txt
+pip install -r ..\scripts\requirements.txt
 cd ..
 python scripts\setup_database.py
+# (scripts/requirements.txt includes backend/requirements.txt)
 
 # backend (terminal 1)
 cd backend

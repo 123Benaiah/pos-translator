@@ -49,7 +49,7 @@ export default function EntryForm({ entry, onClose }: EntryFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!en.trim()) {
-      toast.error('English text is required');
+      toast.error('English word is required.');
       return;
     }
 

@@ -89,9 +89,11 @@ async def create_entry(
     db: AsyncIOMotorDatabase = Depends(get_db),
 ):
     key = body.en.strip().lower()
+    if not key:
+        raise HTTPException(status_code=400, detail="English word is required.")
     existing = await db.translations.find_one({"key": key})
     if existing:
-        raise HTTPException(status_code=400, detail=f"Entry with key '{key}' already exists")
+        raise HTTPException(status_code=400, detail=f"The word '{key}' already exists.")
 
     now = datetime.now(timezone.utc)
     doc = {
@@ -110,7 +112,7 @@ async def create_entry(
     try:
         result = await db.translations.insert_one(doc)
     except DuplicateKeyError:
-        raise HTTPException(status_code=400, detail=f"Entry with key '{key}' already exists")
+        raise HTTPException(status_code=400, detail=f"The word '{key}' already exists.")
     doc["_id"] = result.inserted_id
     return EntryResponse(**_serialize(doc))
 

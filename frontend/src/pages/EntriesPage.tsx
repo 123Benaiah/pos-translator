@@ -134,7 +134,7 @@ export default function EntriesPage() {
           />
 
           {data && data.pages > 1 && (
-            <div className="flex items-center justify-between rounded-xl border border-purple-100 bg-white px-5 py-3 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between rounded-xl border border-purple-100 bg-white px-5 py-3 shadow-sm">
               <span className="text-sm text-slate-500">
                 Page {data.page} of {data.pages} ({data.total} entries)
               </span>

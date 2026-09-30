@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { Languages, Search, Database, BarChart3, Layers } from 'lucide-react';
 import Logo from './Logo';
-import { useHealth } from '../../hooks/useHealth';
+import ServerStatus from './ServerStatus';
 import { cn } from '../../lib/utils';
 
 const navItems = [
@@ -13,9 +13,6 @@ const navItems = [
 ];
 
 export default function Sidebar() {
-  const { data: health } = useHealth();
-  const isConnected = health?.db === 'connected';
-
   return (
     <aside className="fixed inset-y-0 left-0 z-30 flex w-60 flex-col bg-purple-900">
       <Logo />
@@ -42,17 +39,7 @@ export default function Sidebar() {
       </nav>
 
       <div className="border-t border-purple-800 px-4 py-4">
-        <div className="flex items-center gap-2">
-          <span
-            className={cn(
-              'h-2.5 w-2.5 rounded-full',
-              isConnected ? 'bg-gold-400 animate-pulse' : 'bg-red-500',
-            )}
-          />
-          <span className="text-xs text-purple-300">
-            {isConnected ? 'Connected' : 'Disconnected'}
-          </span>
-        </div>
+        <ServerStatus />
       </div>
     </aside>
   );

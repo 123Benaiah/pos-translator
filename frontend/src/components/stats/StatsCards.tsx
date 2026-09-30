@@ -38,23 +38,26 @@ const cards = [
     key: 'missing',
     label: 'Missing Translations',
     getValue: (s: StatsResponse) => (s.missing_loz + s.missing_bem).toLocaleString(),
-    gradient: '',
+    gradient: 'bg-orange-50',
     icon: AlertTriangle,
     iconColor: 'text-orange-500',
     border: 'border-2 border-orange-400',
+    dark: true,
   },
 ];
 
 export default function StatsCards({ stats }: StatsCardsProps) {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {cards.map((card) => (
+      {cards.map((card) => {
+        const dark = 'dark' in card && card.dark;
+        return (
         <Card key={card.key} className={`overflow-hidden ${card.border}`}>
           <div className={`${card.gradient} px-5 py-6`}>
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-white/80">{card.label}</p>
-                <p className="mt-1 text-3xl font-bold text-white font-display">
+                <p className={`text-sm font-medium ${dark ? 'text-orange-700' : 'text-white/80'}`}>{card.label}</p>
+                <p className={`mt-1 text-3xl font-bold font-display ${dark ? 'text-slate-900' : 'text-white'}`}>
                   {card.getValue(stats)}
                 </p>
               </div>
@@ -62,7 +65,8 @@ export default function StatsCards({ stats }: StatsCardsProps) {
             </div>
           </div>
         </Card>
-      ))}
+        );
+      })}
     </div>
   );
 }

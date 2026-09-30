@@ -23,7 +23,7 @@ export default function LanguagePicker({ value, onChange, label }: LanguagePicke
   return (
     <div>
       {label && <p className="mb-1.5 text-sm font-medium text-slate-700">{label}</p>}
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-1.5 sm:gap-2">
         {(Object.keys(langColors) as Language[]).map((lang) => {
           const isActive = value === lang;
           return (
@@ -31,7 +31,7 @@ export default function LanguagePicker({ value, onChange, label }: LanguagePicke
               key={lang}
               onClick={() => onChange(lang)}
               className={cn(
-                'rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 border-2',
+                'flex-1 sm:flex-none rounded-lg px-2 sm:px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 border-2 whitespace-nowrap',
                 isActive
                   ? cn(langColors[lang].active, 'border-transparent shadow-md')
                   : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300',

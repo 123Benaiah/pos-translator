@@ -53,7 +53,7 @@ export default function BatchTranslatePanel() {
     <div className="space-y-6">
       <Card className="p-6">
         <div className="space-y-5">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <LanguagePicker value={fromLang} onChange={setFromLang} label="From" />
             <LanguagePicker value={toLang} onChange={setToLang} label="To" />
           </div>

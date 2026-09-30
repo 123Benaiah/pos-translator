@@ -33,11 +33,23 @@ The app runs at http://localhost:5173 and proxies `/api` requests to the backend
 - Zustand (language store with persist)
 - Axios, React Hot Toast, Lucide React icons
 
+## Notes
+
+- Sidebar footer `ServerStatus` polls `GET /api/health` every 30s and has a
+  manual refresh button (entries count, backend origin, Render vs DB error hint).
+- Hooks map 1:1 to API (`src/hooks/`, `useTranslate` single is available but
+  panels currently use `useTranslateAll`); DTOs in `src/types`.
+- `@` alias → `src` is configured (`vite.config.ts`, `tsconfig.json`).
+
 ## Deploy (Vercel)
 
-Import the repo in Vercel — `vercel.json` at the repo root already sets the
-build (`cd frontend && npm ci && npm run build`), output (`frontend/dist`),
-and SPA rewrites. Then set in the Vercel dashboard:
+Vercel project `pos-translator`, settings:
+
+- `Root Directory = frontend`
+- `Framework = Vite`, `Install = npm ci`, `Build = npm run build`, `Output = dist`
+- `frontend/vercel.json` provides SPA rewrites (`/(.*) -> /index.html`)
+
+Set in the Vercel dashboard (Production + Preview, then Redeploy — Vite bakes it at build time):
 
 - `VITE_API_URL=https://<your-backend>.onrender.com` (required, build-time)
 

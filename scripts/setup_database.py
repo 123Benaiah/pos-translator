@@ -105,7 +105,8 @@ FILENAME_CATEGORY = {
 def connect_db():
     client = MongoClient(MONGO_URI)
     db = client[DB_NAME]
-    print(f"Connected to {MONGO_URI} -> database '{DB_NAME}'")
+    # Never print the full URI — it contains credentials.
+    print(f"Connected to database '{DB_NAME}'")
     return client, db
 
 

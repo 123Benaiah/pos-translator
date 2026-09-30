@@ -1,4 +1,3 @@
-import asyncio
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, BackgroundTasks, Depends, Query
@@ -17,8 +16,6 @@ from app.models import (
 
 router = APIRouter()
 
-VALID_LANGS = {"en", "loz", "bem"}
-
 
 async def _log_translation(
     db: AsyncIOMotorDatabase,
@@ -28,16 +25,20 @@ async def _log_translation(
     output_text: str,
     found: bool,
 ):
-    await db.translation_log.insert_one(
-        {
-            "input_text": input_text,
-            "from_lang": from_lang,
-            "to_lang": to_lang,
-            "output_text": output_text,
-            "found": found,
-            "timestamp": datetime.now(timezone.utc),
-        }
-    )
+    try:
+        await db.translation_log.insert_one(
+            {
+                "input_text": input_text,
+                "from_lang": from_lang,
+                "to_lang": to_lang,
+                "output_text": output_text,
+                "found": found,
+                "timestamp": datetime.now(timezone.utc),
+            }
+        )
+    except Exception:
+        # Logging must never break the user-facing response.
+        pass
 
 
 @router.get(
@@ -46,11 +47,11 @@ async def _log_translation(
     responses={400: {"model": ErrorResponse}},
 )
 async def translate_word(
+    background_tasks: BackgroundTasks,
     text: str = Query(..., min_length=1),
     from_lang: LanguageEnum = Query(...),
     to_lang: LanguageEnum = Query(...),
     db: AsyncIOMotorDatabase = Depends(get_db),
-    background_tasks: BackgroundTasks = BackgroundTasks(),
 ):
     text = text.strip().lower()
     if from_lang == to_lang:
@@ -90,10 +91,10 @@ async def translate_word(
     responses={400: {"model": ErrorResponse}},
 )
 async def translate_all(
+    background_tasks: BackgroundTasks,
     text: str = Query(..., min_length=1),
     from_lang: LanguageEnum = Query(default=LanguageEnum.en),
     db: AsyncIOMotorDatabase = Depends(get_db),
-    background_tasks: BackgroundTasks = BackgroundTasks(),
 ):
     text = text.strip().lower()
     doc = await db.translations.find_one(
@@ -139,9 +140,9 @@ async def translate_all(
     responses={400: {"model": ErrorResponse}},
 )
 async def translate_batch(
+    background_tasks: BackgroundTasks,
     body: BatchTranslateRequest,
     db: AsyncIOMotorDatabase = Depends(get_db),
-    background_tasks: BackgroundTasks = BackgroundTasks(),
 ):
     from_lang = body.from_lang.value
     to_lang = body.to_lang.value

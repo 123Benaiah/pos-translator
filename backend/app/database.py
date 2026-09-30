@@ -9,7 +9,7 @@ _db: AsyncIOMotorDatabase | None = None
 async def connect_db() -> None:
     global _client, _db
     settings = get_settings()
-    _client = AsyncIOMotorClient(settings.MONGO_URI)
+    _client = AsyncIOMotorClient(settings.MONGO_URI, serverSelectionTimeoutMS=8000)
     _db = _client[settings.DB_NAME]
 
 

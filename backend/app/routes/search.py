@@ -1,4 +1,5 @@
 import re
+from typing import Literal
 
 from fastapi import APIRouter, Depends, Query
 from motor.motor_asyncio import AsyncIOMotorDatabase
@@ -12,7 +13,7 @@ router = APIRouter()
 @router.get("/search", response_model=SearchResponse)
 async def search_translations(
     q: str = Query(..., min_length=2),
-    lang: str = Query(default="all"),
+    lang: Literal["all", "en", "loz", "bem"] = Query(default="all"),
     category: str | None = Query(default=None),
     limit: int = Query(default=20, ge=1, le=100),
     db: AsyncIOMotorDatabase = Depends(get_db),
@@ -26,14 +27,8 @@ async def search_translations(
             {"loz": {"$regex": pattern}},
             {"bem": {"$regex": pattern}},
         ]}
-    elif lang in ("en", "loz", "bem"):
-        query = {lang: {"$regex": pattern}}
     else:
-        query = {"$or": [
-            {"en": {"$regex": pattern}},
-            {"loz": {"$regex": pattern}},
-            {"bem": {"$regex": pattern}},
-        ]}
+        query = {lang: {"$regex": pattern}}
 
     if category:
         query["category"] = category

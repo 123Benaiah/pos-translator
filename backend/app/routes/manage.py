@@ -1,10 +1,10 @@
 import math
 from datetime import datetime, timezone
 
-from bson import ObjectId
 from fastapi import APIRouter, Depends, HTTPException, Query
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from pymongo import ASCENDING
+from pymongo.errors import DuplicateKeyError
 
 from app.dependencies import get_db
 from app.models import (
@@ -20,8 +20,9 @@ router = APIRouter()
 
 
 def _serialize(doc: dict) -> dict:
-    doc["_id"] = str(doc["_id"])
-    return doc
+    data = dict(doc)
+    data["_id"] = str(data["_id"])
+    return data
 
 
 @router.get(
@@ -105,7 +106,11 @@ async def create_entry(
         "updated_at": now,
     }
 
-    result = await db.translations.insert_one(doc)
+    result = None
+    try:
+        result = await db.translations.insert_one(doc)
+    except DuplicateKeyError:
+        raise HTTPException(status_code=400, detail=f"Entry with key '{key}' already exists")
     doc["_id"] = result.inserted_id
     return EntryResponse(**_serialize(doc))
 

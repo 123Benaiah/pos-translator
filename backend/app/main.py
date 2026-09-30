@@ -1,7 +1,7 @@
 from contextlib import asynccontextmanager
 from html import escape
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, JSONResponse
 
@@ -38,9 +38,17 @@ app.add_middleware(
 
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
+    # Let FastAPI handle HTTPException (404/400/422) normally;
+    # only convert unexpected errors to 500 without leaking internals.
+    if isinstance(exc, HTTPException):
+        return JSONResponse(
+            status_code=exc.status_code,
+            content={"error": exc.detail if isinstance(exc.detail, str) else "Request failed",
+                     "detail": exc.detail},
+        )
     return JSONResponse(
         status_code=500,
-        content={"error": "Internal server error", "detail": str(exc)},
+        content={"error": "Internal server error", "detail": "Unexpected error"},
     )
 
 

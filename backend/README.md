@@ -26,6 +26,16 @@ Set in the Render dashboard:
 
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
+- Landing: `GET /` (HTML API + DB status with collection counts),
+  `GET /api` (JSON summary), `GET /api/health` (status/db/entries).
+  Full endpoint reference: `docs/API.md`.
+
+## Data & indexes
+
+Collections `translations` (key unique + en/loz/bem/category indexes)
+and `translation_log` (timestamp/from_lang) are created by
+`scripts/setup_database.py` (run from repo root with backend venv;
+sources `docs/languages/*/*.csv`). Dumps live in `dumps/`.
 
 ## Endpoints
 

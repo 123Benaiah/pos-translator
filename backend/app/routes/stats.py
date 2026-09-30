@@ -46,9 +46,9 @@ async def health_check(
     try:
         await db.command("ping")
         db_status = "connected"
+        count = await db.translations.count_documents({})
     except Exception:
         db_status = "disconnected"
-
-    count = await db.translations.count_documents({})
+        count = 0
 
     return HealthResponse(status="ok", db=db_status, entries=count)
